@@ -61,9 +61,9 @@ public class MealPlanCalculator extends JFrame {
 	 * The buildButtonPanel method creates a panel containing the calc property tax button.
 	 */
 	private void buildButtonPanel() {
-		// Create a button to calculate the property tax.
+		// Create a button to calculate the charges.
 		JButton calcButton = new JButton(
-				"Calculate Property tax");
+				"Calculate Charges");
 		// Add an action listener to the button.
 		calcButton.addActionListener(
 				new CalcButtonListener());
