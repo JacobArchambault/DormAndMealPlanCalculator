@@ -67,13 +67,8 @@ public class MealPlanPanel extends JPanel {
 	}
 
 	public void calculateCharges() {
-		double totalCharges;
-		Object selectedDorm = dorms.getSelectedItem();
-		if (selectedDorm.toString().contains("Allen")) {
-			totalCharges = 1000;
-		} else {
-			totalCharges = 0;
-		}
+		double totalCharges = 0;
+		double dormPrice = getSelectedDorm();
 		Object mealPlan = meals.getSelectedItem();
 //		// Get the assessmentValue.
 //		double assessmentValue = Double.parseDouble(
@@ -85,6 +80,25 @@ public class MealPlanPanel extends JPanel {
 				null,
 				String.format(
 						"Total charges per semester: $%,.2f",
-						totalCharges));
+						dormPrice));
+	}
+
+	private double getSelectedDorm() {
+		Object selectedDorm = dorms.getSelectedItem();
+		if (selectedDorm.toString()
+				.contains(
+						"Allen")) {
+			return 1500;
+		} else if (selectedDorm.toString()
+				.contains(
+						"Pike")) {
+			return 1600;
+		}else if (selectedDorm.toString()
+				.contains(
+						"Farthing")) {
+			return 1200;
+		}else {
+			return 1800;			
+		}
 	}
 }
