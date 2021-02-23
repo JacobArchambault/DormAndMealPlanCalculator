@@ -15,6 +15,7 @@ public class MealPlanPanel extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JComboBox dorms; // To store dorm list
+	private JComboBox meals; // To store meal plan list
 
 	/**
 	 * Constructor
@@ -36,6 +37,16 @@ public class MealPlanPanel extends JPanel {
 		add(
 				new JLabel(
 						"Select a meal plan:"));
+		mealComboBox();
+	}
+
+	private void mealComboBox() {
+		meals = new JComboBox();
+		meals.addItem("7 meals per week");
+		meals.addItem("14 meals per week");
+		meals.addItem("Unlimited meals per week");
+		add(
+				meals);
 	}
 
 	private void dormComboBox() {
