@@ -67,6 +67,14 @@ public class MealPlanPanel extends JPanel {
 	}
 
 	public void calculateCharges() {
+		double totalCharges;
+		Object selectedDorm = dorms.getSelectedItem();
+		if (selectedDorm.toString().contains("Allen")) {
+			totalCharges = 1000;
+		} else {
+			totalCharges = 0;
+		}
+		Object mealPlan = meals.getSelectedItem();
 //		// Get the assessmentValue.
 //		double assessmentValue = Double.parseDouble(
 //				propertyValue.getText()) * .6;
@@ -76,7 +84,7 @@ public class MealPlanPanel extends JPanel {
 		JOptionPane.showMessageDialog(
 				null,
 				String.format(
-						"Total charges per semester: "
-						));
+						"Total charges per semester: $%,.2f",
+						totalCharges));
 	}
 }
