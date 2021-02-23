@@ -59,7 +59,7 @@ public class MealPlanPanel extends JPanel {
 				dorms);
 	}
 
-	public void showPropertyTax() {
+	public void calculateCharges() {
 //		// Get the assessmentValue.
 //		double assessmentValue = Double.parseDouble(
 //				propertyValue.getText()) * .6;

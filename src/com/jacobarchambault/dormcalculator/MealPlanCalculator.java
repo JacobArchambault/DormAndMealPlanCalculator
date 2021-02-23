@@ -22,7 +22,7 @@ public class MealPlanCalculator extends JFrame {
 		@Override
 		public void actionPerformed(
 				ActionEvent e) {
-			mealPlanPanel.showPropertyTax();
+			mealPlanPanel.calculateCharges();
 		}
 	} // End of inner class
 
