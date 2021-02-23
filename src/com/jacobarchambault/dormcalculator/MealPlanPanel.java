@@ -32,7 +32,7 @@ public class MealPlanPanel extends JPanel {
 						"Select a Dorm:"));
 		// Create a combo box .
 		dormComboBox();
-		
+
 		// Add the labels and text fields to this panel.
 		add(
 				new JLabel(
@@ -42,19 +42,26 @@ public class MealPlanPanel extends JPanel {
 
 	private void mealComboBox() {
 		meals = new JComboBox();
-		meals.addItem("7 meals per week");
-		meals.addItem("14 meals per week");
-		meals.addItem("Unlimited meals per week");
+		meals.addItem(
+				"7 meals per week");
+		meals.addItem(
+				"14 meals per week");
+		meals.addItem(
+				"Unlimited meals per week");
 		add(
 				meals);
 	}
 
 	private void dormComboBox() {
 		dorms = new JComboBox();
-		dorms.addItem("Allen Hall");
-		dorms.addItem("Pike Hall");
-		dorms.addItem("Farthing Hall");
-		dorms.addItem("University Suites");
+		dorms.addItem(
+				"Allen Hall");
+		dorms.addItem(
+				"Pike Hall");
+		dorms.addItem(
+				"Farthing Hall");
+		dorms.addItem(
+				"University Suites");
 		add(
 				dorms);
 	}
@@ -66,11 +73,10 @@ public class MealPlanPanel extends JPanel {
 //		// Get the property tax.
 //		double propertyTax = assessmentValue * .0064;
 //		// Display them.
-//		JOptionPane.showMessageDialog(
-//				null,
-//				String.format(
-//						"Assessment Value: $%,.2f\nProperty tax: $%,.2f",
-//						assessmentValue,
-//						propertyTax));
+		JOptionPane.showMessageDialog(
+				null,
+				String.format(
+						"Total charges per semester: "
+						));
 	}
 }
