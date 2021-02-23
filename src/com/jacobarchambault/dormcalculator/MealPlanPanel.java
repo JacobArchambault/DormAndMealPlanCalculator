@@ -20,8 +20,6 @@ public class MealPlanPanel extends JPanel {
 	 * Constructor
 	 */
 	public MealPlanPanel() {
-		// Create a text field.
-		dorms = new JComboBox();
 		// Create a GridLayout manager.
 		setLayout(
 				new GridLayout(
@@ -31,16 +29,23 @@ public class MealPlanPanel extends JPanel {
 		add(
 				new JLabel(
 						"Select a Dorm:"));
-		add(
-				dorms);
-		dorms.addItem("Allen Hall");
-		dorms.addItem("Pike Hall");
-		dorms.addItem("Farthing Hall");
-		dorms.addItem("University Suites");
+		// Create a combo box .
+		dormComboBox();
+		
 		// Add the labels and text fields to this panel.
 		add(
 				new JLabel(
 						"Select a meal plan:"));
+	}
+
+	private void dormComboBox() {
+		dorms = new JComboBox();
+		dorms.addItem("Allen Hall");
+		dorms.addItem("Pike Hall");
+		dorms.addItem("Farthing Hall");
+		dorms.addItem("University Suites");
+		add(
+				dorms);
 	}
 
 	public void showPropertyTax() {
