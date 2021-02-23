@@ -24,14 +24,18 @@ public class MealPlanPanel extends JPanel {
 		// Create a GridLayout manager.
 		setLayout(
 				new GridLayout(
-						1,
+						2,
 						2));
 		// Add the labels and text fields to this panel.
 		add(
 				new JLabel(
-						"Enter the actual property value:"));
+						"Select a Dorm:"));
 		add(
 				propertyValue);
+		// Add the labels and text fields to this panel.
+		add(
+				new JLabel(
+						"Select a meal plan:"));
 	}
 
 	public void showPropertyTax() {
