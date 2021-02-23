@@ -4,10 +4,8 @@ import java.awt.GridLayout;
 
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 public class MealPlanPanel extends JPanel {
 	/**
@@ -40,16 +38,14 @@ public class MealPlanPanel extends JPanel {
 		mealComboBox();
 	}
 
-	private void mealComboBox() {
-		meals = new JComboBox();
-		meals.addItem(
-				"7 meals per week");
-		meals.addItem(
-				"14 meals per week");
-		meals.addItem(
-				"Unlimited meals per week");
-		add(
-				meals);
+	public void calculateCharges() {
+		double dormPrice = getSelectedDorm();
+		double mealPrice = getSelectedMealPlan();
+		JOptionPane.showMessageDialog(
+				null,
+				String.format(
+						"Total charges per semester: $%,.2f",
+						dormPrice + mealPrice));
 	}
 
 	private void dormComboBox() {
@@ -64,16 +60,6 @@ public class MealPlanPanel extends JPanel {
 				"University Suites");
 		add(
 				dorms);
-	}
-
-	public void calculateCharges() {
-		double dormPrice = getSelectedDorm();
-		double mealPrice = getSelectedMealPlan();
-		JOptionPane.showMessageDialog(
-				null,
-				String.format(
-						"Total charges per semester: $%,.2f",
-						dormPrice + mealPrice));
 	}
 
 	private double getSelectedDorm() {
@@ -106,5 +92,17 @@ public class MealPlanPanel extends JPanel {
 			return 1500;
 		}
 
+	}
+
+	private void mealComboBox() {
+		meals = new JComboBox();
+		meals.addItem(
+				"7 meals per week");
+		meals.addItem(
+				"14 meals per week");
+		meals.addItem(
+				"Unlimited meals per week");
+		add(
+				meals);
 	}
 }

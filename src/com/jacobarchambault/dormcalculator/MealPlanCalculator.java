@@ -31,15 +31,15 @@ public class MealPlanCalculator extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 
-
-
 	private MealPlanPanel mealPlanPanel; // A panel for displaying assessmentValue and tax
 
 	/**
 	 * Constructor
 	 */
-	public MealPlanCalculator(String title) {
-		super(title);
+	public MealPlanCalculator(
+			String title) {
+		super(
+				title);
 		// Specify what happens when the close button is clicked.
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
@@ -58,7 +58,8 @@ public class MealPlanCalculator extends JFrame {
 	}
 
 	/**
-	 * The buildButtonPanel method creates a panel containing the calc property tax button.
+	 * The buildButtonPanel method creates a panel containing the calc property tax
+	 * button.
 	 */
 	private void buildButtonPanel() {
 		// Create a button to calculate the charges.
