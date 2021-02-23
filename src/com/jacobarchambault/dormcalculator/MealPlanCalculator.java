@@ -22,7 +22,7 @@ public class MealPlanCalculator extends JFrame {
 		@Override
 		public void actionPerformed(
 				ActionEvent e) {
-			propertyTaxPanel.showPropertyTax();
+			mealPlanPanel.showPropertyTax();
 		}
 	} // End of inner class
 
@@ -33,7 +33,7 @@ public class MealPlanCalculator extends JFrame {
 
 
 
-	private MealPlanPanel propertyTaxPanel; // A panel for displaying assessmentValue and tax
+	private MealPlanPanel mealPlanPanel; // A panel for displaying assessmentValue and tax
 
 	/**
 	 * Constructor
@@ -44,12 +44,12 @@ public class MealPlanCalculator extends JFrame {
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
 		// Create a PropertyTaxPanel object.
-		propertyTaxPanel = new MealPlanPanel();
+		mealPlanPanel = new MealPlanPanel();
 		// Build the panel that contains the button.
 		buildButtonPanel();
 		// Add the panels to the content pane.
 		add(
-				propertyTaxPanel,
+				mealPlanPanel,
 				BorderLayout.CENTER);
 		// Pack and display the window.
 		pack();
