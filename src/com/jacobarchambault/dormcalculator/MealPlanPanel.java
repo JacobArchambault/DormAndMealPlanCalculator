@@ -77,18 +77,16 @@ public class MealPlanPanel extends JPanel {
 	}
 
 	private double getSelectedDorm() {
-		Object selectedDorm = dorms.getSelectedItem();
-		if (selectedDorm.toString()
-				.contains(
-						"Allen")) {
+		String selectedDorm = dorms.getSelectedItem()
+				.toString();
+		if (selectedDorm.contains(
+				"Allen")) {
 			return 1500;
-		} else if (selectedDorm.toString()
-				.contains(
-						"Pike")) {
+		} else if (selectedDorm.contains(
+				"Pike")) {
 			return 1600;
-		} else if (selectedDorm.toString()
-				.contains(
-						"Farthing")) {
+		} else if (selectedDorm.contains(
+				"Farthing")) {
 			return 1200;
 		} else {
 			return 1800;
@@ -96,14 +94,13 @@ public class MealPlanPanel extends JPanel {
 	}
 
 	private double getSelectedMealPlan() {
-		Object mealPlan = meals.getSelectedItem();
-		if (mealPlan.toString()
-				.contains(
-						"7")) {
+		String mealPlan = meals.getSelectedItem()
+				.toString();
+		if (mealPlan.contains(
+				"7")) {
 			return 560;
-		} else if (mealPlan.toString()
-				.contains(
-						"14")) {
+		} else if (mealPlan.contains(
+				"14")) {
 			return 1095;
 		} else {
 			return 1500;
