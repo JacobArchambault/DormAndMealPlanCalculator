@@ -31,7 +31,7 @@ public class MealPlanCalculator extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private MealPlanPanel mealPlanPanel; // A panel for displaying assessmentValue and tax
+	private MealPlanPanel mealPlanPanel; // A panel for displaying meal and dorm info
 
 	/**
 	 * Constructor
@@ -58,7 +58,7 @@ public class MealPlanCalculator extends JFrame {
 	}
 
 	/**
-	 * The buildButtonPanel method creates a panel containing the calc property tax
+	 * The buildButtonPanel method creates a panel containing the calculate charges
 	 * button.
 	 */
 	private void buildButtonPanel() {
